@@ -881,15 +881,15 @@
   const params = new URLSearchParams(location.search);
   const requested = normalize(params.get("lang"));
   const saved = normalize(
-    localStorage.getItem("coco-croissant-language") ||
-    localStorage.getItem("coco-croissant-support-language")
+    localStorage.getItem("cocoCroissant-language") ||
+    localStorage.getItem("cocoCroissant-support-language")
   );
   const preferred = navigator.languages?.map(normalize).find(Boolean);
   const initial = requested || saved || preferred || "en";
   const select = document.querySelector("#language-select");
 
   function apply(locale, updateUrl = true) {
-    const strings = translations[locale] || translations.uk;
+    const strings = translations[locale] || translations.en;
     document.documentElement.lang = locale;
     document.documentElement.dir = locale === "ar" ? "rtl" : "ltr";
     document.title = strings.support + " — " + strings.brand;
@@ -905,7 +905,7 @@
     });
 
     select.value = locale;
-    localStorage.setItem("coco-croissant-language", locale);
+    localStorage.setItem("cocoCroissant-language", locale);
 
     if (updateUrl) {
       const url = new URL(location.href);

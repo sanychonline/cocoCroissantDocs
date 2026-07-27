@@ -1,5 +1,5 @@
 (() => {
-  const catalog = window.Coco CroissantPageTranslations;
+  const catalog = window.CocoCroissantPageTranslations;
   if (!catalog) return;
   const translations = Object.fromEntries(
     Object.entries(catalog.locales).map(([locale, values]) => [
@@ -48,7 +48,7 @@
   };
   const supported = languages.map(([code]) => code);
   const aliases = { pt: "pt-BR", zh: "zh-Hans" };
-  const storageKey = "coco-croissant-language";
+  const storageKey = "cocoCroissant-language";
 
   function normalize(value) {
     if (!value) return null;
@@ -92,7 +92,7 @@
   const requested = normalize(params.get("lang"));
   const saved = normalize(
     localStorage.getItem(storageKey) ||
-    localStorage.getItem("coco-croissant-support-language")
+    localStorage.getItem("cocoCroissant-support-language")
   );
   const preferred = navigator.languages?.map(normalize).find(Boolean);
   const initial = requested || saved || preferred || "en";
