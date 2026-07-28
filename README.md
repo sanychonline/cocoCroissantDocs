@@ -1,6 +1,6 @@
 # Coco Croissant Docs
 
-Public product and support site for **Coco Croissant** / **Цуценя Круасан**. The character is **Цуценя Круасан**, catching falling croissants in a three-lane arcade game.
+Public product and support site for **Coco Croissant** / **Цуценя Круасан**. The character is **Цуценя Круасан**, collecting croissants in a bakery-themed three-lane arcade run.
 
 ## Site content
 
